@@ -35,7 +35,7 @@ def result(request):
     val7 = float(request.GET['n7'])
     val8 = float(request.GET['n8'])
     val9 = str(request.GET['n9'])
-    data = pd.read_csv(r"D:\project\diabetes\diabetes.csv")
+    data = pd.read_csv(".\diabetes.csv")
     x = data.drop('Outcome',axis=1)
     y = data['Outcome']
     
