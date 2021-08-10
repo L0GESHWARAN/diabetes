@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <title>PREDICTION PAGE</title>
+  
+</head>
+<body>
+    <img src="{% static 'img/bg1.jpg' %}" alt="">
+    
+    <form action="result">
+    <label for="Name">Patient Name</label><br>
+    <input type="text" name="n9" ><br><br>
+    <label for="pre">Pregnancies</label><br>
+    <input type="text" name="n1" ><br><br>
+    <label for="glu">Glucose</label><br>
+    <input type="text" name="n2" ><br><br>
+    <label for="bloo">BloodPressure</label><br>
+    <input type="text" name="n3" ><br><br>
+    <label for="skin">SkinThickness</label><br>
+    <input type="text" name="n4"><br><br>
+    <label for="insu">Insulin</label><br>
+    <input type="text" name="n5" ><br><br>
+    <label for="bi">BMI</label><br>
+    <input type="text" name="n6"><br><br>
+    <label for="dpf">DiabetesPedigreeFunction</label><br>
+    <input type="text" name="n7" ><br><br>
+    <label for="age">Age</label><br>
+    <input type="text" name="n8"><br><br>
+
+    <input type="submit" id="submit" value="GENERATE REPORT">
+    
+   
+</form>
+
+
+
+</body>
+</html>

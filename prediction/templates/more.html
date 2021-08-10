@@ -1,0 +1,54 @@
+<style>
+    table{
+        font-weight: bold;
+    }
+    table th {
+        border: 1px solid gray;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        width: 200px;
+        text-align: center;
+         
+            
+    }
+    table tr td{
+        text-align: center;
+        padding-top: 6px;
+        border-bottom: 1px solid gray;
+    }
+</style>
+</head>
+<body>
+<table>
+
+    <tr>
+        <th>MODEL</th><th>ACCURACY</th>
+        <th>RESULT</th>
+        
+    </tr>
+
+<tbody>
+    <tr style="text-transform: uppercase;">
+        <td> Logistic Regression</td><td>79.22%</td>
+        <td>{{result3}}</td>
+        
+    </tr>
+    <tr style="text-transform: uppercase;">
+        <td> Random Forest Classifier</td><td>78.78%</td>
+        <td>{{result0}}</td>
+        
+    </tr>
+    <tr style="text-transform: uppercase;">
+        <td> Support Vector Machine</td><td>77.05%</td>
+        <td>{{result1}}</td>
+        
+    </tr>
+    <tr style="text-transform: uppercase;">
+        <td> Decision Tree Classifier</td><td>72.29%</td>
+        <td>{{result2}}</td>
+        
+    </tr>
+    
+</tbody>
+</table>
+<a href="./">BACK</a>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightcyan;
+        }
+        body img{
+            width: 100%;
+            height: 150px;
+        }
+        #details{
+            position: absolute;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 99%;
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            font-weight: bold;
+        }
+        form #name{
+            position: absolute;
+            margin-top: 50px;
+        }
+        #pname{
+            position: absolute;
+            margin-left: 110px;
+            margin-top: -4px;
+        }
+        #dr{
+            margin-top: -5px;
+        }
+        #dname{
+            margin-top: -17px;
+            margin-left: 110px;
+        }
+        #test{
+            position: absolute;
+            margin-top: 1px;
+        }
+        #ptest{
+            margin-left: 110px;
+        }
+        #age{
+            position: absolute;
+            margin-top: -110px;
+            margin-left: 900px;
+        }
+        #page{
+            position: absolute;
+            margin-top: -110px;
+            margin-left: 1010px;
+        }
+        #date{
+            position: absolute;
+            margin-top: -35px;
+            margin-left: 900px;
+        }
+        #today{
+            position: absolute;
+            margin-top: -35px;
+            margin-left: 1130px;
+        }
+        #blood{
+            position: absolute;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 99%;
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            font-weight: bold;
+        }
+        table{
+            margin-top: 50px;
+        }
+        table th{
+            width: 320px;
+            padding-bottom: 10px;
+        }
+        table td{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        #res{
+            position: absolute;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 99%;
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            font-weight: bold;
+        }
+        fieldset{
+            height: 200px;
+        }
+        h1{
+            text-align: center;
+            padding-top: 50px;
+            color: red;
+        }
+        #ac{
+            position: absolute;
+            font-size: 14.5px;
+            margin-top: 30px;
+            color: green;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            background-color: steelblue;
+            margin-left: 600px;
+            display: block;
+            border: 1px solid gray;
+            margin-right: 600px;
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="{% static 'img/cover.png' %}" alt="">
+    <form action="">
+        <label id="details">DETAILS</label>
+        <label id="name">NAME : </label><br><br><br><p id="pname">{{Name}}</p><br><br>
+        <label id="dr">REF BY: </label><p id="dname">DR.MRS.--------</p>
+        <label id="test">TEST FOR : </label><p id="ptest">DIABETES</p>
+        <label for="age" id="age">AGE : </label><p id="page">{{age}}</p>
+        <label id="date">SAMPLE COLLECTED DATE : </label><p id="today">{{date}}</p>
+
+        <label id="blood">TEST VALUES </label>
+        <table>
+
+            <tr>
+                <th>S.No</th>
+                <th>TEST DESCRIPTION</th><th>RESULT</th>
+                <th>UNIT</th>
+                
+            </tr>
+        
+        <tbody>
+            <tr>
+                <td>1</td><td>No.Of.Pregnancies</td><td>{{Pregnancies}}</td><td>-</td>
+            </tr>
+            <tr>
+                <td>2</td><td>Glucose</td><td>{{Glucose}}</td><td>mg/dl</td>
+            </tr>
+            <tr>
+                <td>3</td><td>BloodPressure</td><td>{{BloodPressure}}</td><td>mg/dl</td>
+            </tr>
+            <tr>
+                <td>4</td><td>SkinThickness</td><td>{{SkinThickness}}</td><td>mg/dl</td>
+            </tr>
+            <tr>
+                <td>5</td><td>Insulin</td><td>{{Insulin}}</td><td>mg/dl</td>
+            </tr>
+            <tr>
+                <td>6</td><td>BMI</td><td>{{BMI}}</td><td>mg/dl</td>
+            </tr>
+            <tr>
+                <td>7</td><td>DiabetesPedigreeFunction</td><td>{{DiabetesPedigreeFunction}}</td><td>mg/dl</td>
+            </tr>
+            
+            
+        </tbody>
+        </table>
+
+        <label id="res">FINAL REPORT </label>
+        <fieldset>
+            <h1>{{result3}}</h1>
+
+            <p id="ac"> Logistic Regression *** "{{result3}}" ***  79.22% || Random Forest Classifier  *** "{{result0}}" ***  78.78% || Support Vector Machine  *** "{{result1}}" ***  77.05% || Decision Tree  *** "{{result2}}" ***  72.29% </p>
+        </fieldset>
+
+    </form>
+            <a href="{% url 'index' %}">BACK</a>
+</body>
+</html>
+
